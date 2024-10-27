@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor</title>
+    <link rel="icon" href="../../sprites/app.png" type="image/png">
+    <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+    
+    <!-- Кнопка назад -->
+    <a href="../../index.html" class="back-button">
+        <img src="../../sprites/close.png" alt="Назад">
+    </a>
+    
+    <!-- Контейнер для кнопок -->
+    <div class="button-container">
+        <div class="button button1" onclick="loadContent('Scripting/script.html')">
+            <a class="text">
+                <img src="Icons/script.png" alt="Скрипты" class="button-icon">
+                Скрипты
+            </a>
+        </div>
+        <div class="button button2" onclick="loadContent('Resources/Resources.html')">
+            <a class="text">
+                <img src="Icons/resources.png" alt="Ресурсы" class="button-icon">
+                Ресурсы
+            </a>
+        </div>
+        <div class="button button3" onclick="toggleLibrary()">
+            <a class="text">
+                <img src="Icons/lib.png" alt="Библиотеки" class="button-icon">
+                Библиотеки
+            </a>
+        </div>
+        <div class="button button4" onclick="loadContent('Options/options.html')">
+            <a class="text">
+                <img src="Icons/settings.png" alt="Настройки" class="button-icon">
+                Настройки
+            </a>
+        </div>
+        <div class="button button5" onclick="loadContent('builds/build.html')">
+            <a class="text">
+                <img src="Icons/build.png" alt="Сборка" class="button-icon">
+                Сборка
+            </a>
+        </div>
+        
+        <div class="button run">
+            <a href="#">
+                <img src="../../sprites/run.png" alt="Run Button" />
+            </a>
+        </div>
+    </div>
+
+    <!-- Контейнер для библиотеки -->
+    <div id="library" class="library-container" style="display: none;">
+        <div class="library-content">
+            <a href="#" class="close-library" onclick="toggleLibrary()">Закрыть</a>
+            <div class="title">Библиотека</div>
+            <div class="Pictures">Картинки</div>
+            <div class="box_pic">
+                <a href=""><img src="товары/товар 1.png" class="Pic"></a>
+            </div>
+            <!-- Дополнительное содержимое библиотеки можно добавлять здесь -->
+        </div>
+    </div>
+
+    <script>
+        function toggleLibrary() {
+            const libraryContainer = document.getElementById('library');
+            libraryContainer.style.display = libraryContainer.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function loadContent(page) {
+            // Загрузка других страниц будет реализована здесь, если необходимо
+            console.log('Загрузка страницы:', page);
+        }
+    </script>
+</body>
+</html>
