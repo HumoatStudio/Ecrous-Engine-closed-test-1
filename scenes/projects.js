@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const projectList = document.getElementById('projectList');
 
     let projects = JSON.parse(localStorage.getItem('projects')) || [];
-    const icons = ['PJicon/iconpj1.png', 'PJicon/iconpj2.png', 'PJicon/iconpj3.png'];
+    const icons = ['PJIcon/iconpj1.png', 'PJIcon/iconpj2.png', 'PJIcon/iconpj3.png'];
     const usedIcons = new Set(); // Набор использованных иконок
 
     function getRandomIcon() {
